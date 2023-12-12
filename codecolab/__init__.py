@@ -13,10 +13,8 @@ except ImportError:
 	on_colab = False
 
 
-EXTENSIONS = ["ms-toolsai.jupyter", "ms-toolsai.vscode-jupyter-cell-tags",
-			  "ms-toolsai.jupyter-keymap", "ms-toolsai.jupyter-renderers",
-			  "ms-python.python", "esbenp.prettier-vscode",
-			  "vscode-icons-team.vscode-icons"
+EXTENSIONS = ["ms-toolsai.jupyter", "ms-python.python",
+			  "esbenp.prettier-vscode", "vscode-icons-team.vscode-icons"
 			  ]
 
 class CodeColab:
