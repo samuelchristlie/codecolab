@@ -32,8 +32,8 @@ class CodeColab:
 
 		self.install_codeserver()
 		self.install_extensions()
+		self.start_cloudflared()		
 		self.start_codeserver()
-		self.start_cloudflared()
 
 	@staticmethod
 	def install_codeserver():
