@@ -56,7 +56,7 @@ class CodeColab:
 			# stdout = subprocess.PIPE
 			)
 
-	def start_codeserver():
+	def start_codeserver(self):
 		os.system(f"fuser -n tcp -k {self.port}")
 
 		if self.mount_drive and on_colab:
@@ -76,7 +76,7 @@ class CodeColab:
 			for line in process.stdout:
 				print(line, end = "")
 
-	def start_cloudflared():
+	def start_cloudflared(self):
 		url = try_cloudflare(port = self.port).tunnel
 
 		print(f"VSCode can be accessed on {url}")
