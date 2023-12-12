@@ -1,0 +1,33 @@
+import argparse
+
+from codecolab import CodeColab
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(
+		description = "CodeColab: Run VSCode on Colab"
+	)
+
+    parser.add_argument(
+    	"--port",
+    	type = int,
+    	help = "Port that you want to run VSCode on.",
+    	default = 8050
+	)
+
+	parser.add_argument(
+		"-p", "--password",
+		type = str,
+		help = "Password to protect your VSCode session.",
+		default = None
+	)
+
+	parser.add_argument(
+		"-md", "--mount-drive",
+		action = "store_true",
+		help = "Mount your Google Drive."
+
+	)
+
+	args = parser.parse_args()
+
+	CodeColab(port = args.port, password = args.password, mount_drove = args.mount_drive)
