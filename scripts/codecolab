@@ -7,11 +7,11 @@ if __name__ == "__main__":
 		description = "CodeColab: Run VSCode on Colab"
 	)
 
-    parser.add_argument(
-    	"--port",
-    	type = int,
-    	help = "Port that you want to run VSCode on.",
-    	default = 8050
+	parser.add_argument(
+		"--port",
+		type = int,
+		help = "Port that you want to run VSCode on.",
+		default = 8050
 	)
 
 	parser.add_argument(
