@@ -47,8 +47,8 @@ class CodeColab:
 
 		command = ["sh", "install.sh"]
 
-		if self.version:
-			command += ["--version", self.version]
+		if version:
+			command += ["--version", version]
 
 		subprocess.run(command,
 					   # stdout = subprocess.PIPE
