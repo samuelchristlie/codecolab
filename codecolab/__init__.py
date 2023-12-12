@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-from cloudflared import try_cloudflare
+from pycloudflared import try_cloudflare
 
 
 try:
