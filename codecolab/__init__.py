@@ -25,10 +25,12 @@ class CodeColab:
 		port = 8050,
 		password = None,
 		mount_drive = False,
+		version = None
 	):
 		self.port = port
 		self.password = password
 		self.mount_drive = mount_drive
+		self.version = version
 
 		self.install_codeserver()
 		self.install_extensions()
@@ -43,8 +45,12 @@ class CodeColab:
 					   # stdout = subprocess.PIPE
 					   )
 
-		subprocess.run(["sh", "install.sh"
-					   ],
+		command = ["sh", "install.sh"]
+
+		if self.version:
+			command += ["--version", self.version]
+
+		subprocess.run(command,
 					   # stdout = subprocess.PIPE
 					   )
 

@@ -30,6 +30,13 @@ if __name__ == "__main__":
 
 	)
 
+	parser.add_argument(
+		"-v", "--version",
+		type = str,
+		help = "Version of Code-Server to install."
+
+	)
+
 	args = parser.parse_args()
 
-	CodeColab(port = args.port, password = args.password, mount_drive = args.mount_drive)
+	CodeColab(port = args.port, password = args.password, mount_drive = args.mount_drive, version = args.version)
