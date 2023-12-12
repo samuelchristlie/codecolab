@@ -32,13 +32,13 @@ class CodeColab:
 		self.mount_drive = mount_drive
 		self.version = version
 
-		self.install_codeserver()
+		self.install_codeserver(version = self.version)
 		self.install_extensions()
 		self.start_cloudflared()		
 		self.start_codeserver()
 
 	@staticmethod
-	def install_codeserver():
+	def install_codeserver(version = None):
 		subprocess.run(["curl", "-O",
 						"https://raw.githubusercontent.com/coder/code-server/main/install.sh"
 					   ],
